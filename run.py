@@ -205,6 +205,34 @@ def update_worksheet_contact(add_new_contact):
     print("Contact is now saved successfully! \n")
     add_one_more()
 
+
+def show_all_contacts():
+    """
+    Function to get all the contacts from google sheet
+    and show them as a list for each person in the
+    contact book
+    """
+    get_all = CONTACTS.get_all_records()
+    if get_all:
+        for contact in get_all:
+            printing_all_contacts(contact)
+    else:
+        print("Contactbook is empty!\n")
+    back_to_menu()
+
+
+def printing_all_contacts(existing):
+    """
+    Function that takes all the existing contacts from worksheet
+    and make it a loop with the headers as title and the contact
+    information as info in a list for each contact.
+    """
+    one_contact = []
+    for title, info in existing.items():
+        print(f'{title}: {info}')
+    print("-----------------------------------")
+    return one_contact
+
           
 
 
