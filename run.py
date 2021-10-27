@@ -195,6 +195,16 @@ def add_one_more():
         return False
 
 
+def update_worksheet_contact(add_new_contact):
+    """
+    Updating the google sheet with new contact informaion in contactbook.
+    Provides a validation message that the update is complete.
+    """
+    new_worksheet = SHEET.worksheet('contacts')
+    new_worksheet.append_row([x for x in add_new_contact.values()])
+    print("Contact is now saved successfully! \n")
+    add_one_more()
+
           
 
 
