@@ -174,6 +174,27 @@ def back_to_menu():
             back_to_menu()
             break
         return False
+
+
+def add_one_more():
+    """
+    Giving the user the choise to add new contact 
+    instead of get to start menu after adding a contact.
+    """
+    while True:
+        again = input("Add another contact: A, Back to menu: B \n")
+        if again == "A" or again == "a":
+            add_new_contact()
+            break
+        elif again == "B" or again == "b":
+            start()
+            break
+        else:
+            print("Invalid input, Try again")
+            add_one_more()
+        return False
+
+
           
 
 
