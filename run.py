@@ -1,13 +1,4 @@
 import gspread
-from google.oauth2.service_account import Credentials
-
-SCOPE = [
-    "https://www.googleapis.com/auth/spreadsheets",
-    "https://www.googleapis.com/auth/drive.file",
-    "https://www.googleapis.com/auth/drive"
-    ]
-
-import gspread
 import re
 from google.oauth2.service_account import Credentials
 
@@ -38,7 +29,7 @@ def start():
                 6. Exit\n
                     """)
     while True:
-        choise = input("Choose the number of the option you want to choose: \n")
+        choise = input("Choose the number of the option you want to do: \n")
         if choise == '1':
             print("Add new contact...\n")
             add_new_contact()
@@ -72,6 +63,7 @@ def add_new_contact():
     """
     Add a new contact with first name, last name, phone number and email
     and check so the user input is correct, otherwise a error shows.
+
     """
     add_new_contact = {}
 
@@ -96,6 +88,7 @@ def add_new_contact():
         """
         To valid phone number using help from
         https://www.sololearn.com/Discuss/2588446/solved-python-phone-number-validator
+
         """
         phone_number = input("Phone Number: \n")
         pattern = r"^[0-9]"
@@ -134,7 +127,8 @@ def add_new_contact():
 def check_double(column, name):
     """
     function that check if the name user input in add_new_contact already
-    exist, so there is no doublicate contacts
+    exist, so there is no doublicate contacts.
+
     """
     print("loading...")
     check = CONTACTS.find(name)
@@ -160,6 +154,7 @@ def back_to_menu():
     """
     User get a question if
     they want to go back to menu or quit.
+
     """
     while True:
         user_choise = input("Back to menu: B, Quit programme: Q \n")
@@ -199,6 +194,7 @@ def update_worksheet_contact(add_new_contact):
     """
     Updating the google sheet with new contact informaion in contactbook.
     Provides a validation message that the update is complete.
+
     """
     new_worksheet = SHEET.worksheet('contacts')
     new_worksheet.append_row([x for x in add_new_contact.values()])
@@ -225,6 +221,7 @@ def printing_all_contacts(existing):
     Function that takes all the existing contacts from worksheet
     and make it a loop with the headers as title and the contact
     information as info in a list for each contact.
+
     """
     one_contact = []
     for title, info in existing.items():
@@ -237,6 +234,7 @@ def search_contact():
     """
     Search function with a menu for the user to enter what
     they are searching for in contact book.
+
     """
     print("----SEARCH:----")
     print("1. First Name")
@@ -264,7 +262,8 @@ def search_contact():
 
 def get_from_search(find_search):
     """
-    Get input from user in search task, from name, number and email
+    Get input from user in search task, from name, number and email.
+
     """
     if find_search == 'First Name':
         find_object = input('First Name: \n').capitalize()
@@ -303,7 +302,8 @@ def get_from_search(find_search):
 def find_column(column, value):
     """
     Get the cell row number and column number of the
-    contact that the user is searching for
+    contact that the user is searching for.
+
     """
     print("searching......\n")
     column_match = CONTACTS.findall(value)
@@ -384,12 +384,22 @@ def exit_programme():
     print("-------------------------------------------------------")
     print("---------------Thank you for using this app----------------")
     print("--------------------Contactbook app team!-------------------")
-    print("------------------------GOODBYE------------------------")
+    print("------------------------See you next time------------------------")
     print("-------------------------------------------------------")
 
 
 def main():
     """
-    contains all the functions for the program
+    contains all the functions for the program.
+
     """
     start()
+
+
+print("-------------------------------------------------------")
+print("-----------------------WELCOME!------------------------")
+print("---------------This is a contact book app--------------")
+print("-------------Please choose an option of what------------")
+print("---------------you wish to do in the menu--------------")
+print("-------------------------------------------------------\n")
+main()
