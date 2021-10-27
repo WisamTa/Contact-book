@@ -313,7 +313,8 @@ def find_column(column, value):
 
 def delete_one(contact):
     """
-   A Function to remind the user before deleting contacts
+    A Function to remind the user before deleting contacts.
+    
     """
     delete = input("Do you want to delete this contact? Y/N: \n")
     while True:
@@ -333,12 +334,46 @@ def delete_one(contact):
 def delete_row(row):
     """
     This function delete the row of the specific contact.
+
     """
     deleted_contact = CONTACTS.delete_rows(row)
     print("Contact is now succesfully deleted\n")
     start()
     return deleted_contact
 
+
+def reset_contactbook():
+    """
+    Deleting the worksheet.
+    All values clear, but the headers/titles appear on the first row again.
+
+    """
+    print("delete all contacts...\n")
+    CONTACTS.clear()
+    values = ("First name", "Last Name", "Phone Number", "E-Mail")
+    new_sheet = CONTACTS.append_row(values)
+    print("Phone Book is now reset!\n")
+    back_to_menu()
+    return new_sheet
+
+
+def validate_reset():
+    """
+    Remind the user about thier actions in deleting the contacts
+
+    """
+    reset = input("Are you sure you want to reset? Y/N: \n")
+    while True:
+        if reset == 'Y' or reset == 'y':
+            reset_contactbook()
+            break
+        elif reset == "N" or reset == "n":
+            back_to_menu()
+            break
+        else:
+            print("Not a valid input, Try again!")
+            break
+        return False
     
 
 
