@@ -309,7 +309,37 @@ def find_column(column, value):
     column_match = CONTACTS.findall(value)
 
     return column_match
-          
+
+
+def delete_one(contact):
+    """
+   A Function to remind the user before deleting contacts
+    """
+    delete = input("Do you want to delete this contact? Y/N: \n")
+    while True:
+        if delete == 'Y' or delete == 'y':
+            print("Deleting.....\n")
+            delete_row(contact)
+        elif delete == 'N' or delete == 'n':
+            print("Not deleted!\n")
+            back_to_menu()
+            break
+        else:
+            print("Invalid input, Try again")
+            break
+        return False
+
+
+def delete_row(row):
+    """
+    This function delete the row of the specific contact.
+    """
+    deleted_contact = CONTACTS.delete_rows(row)
+    print("Contact is now succesfully deleted\n")
+    start()
+    return deleted_contact
+
+    
 
 
 def main():
