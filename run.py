@@ -314,7 +314,7 @@ def find_column(column, value):
 def delete_one(contact):
     """
     A Function to remind the user before deleting contacts.
-    
+
     """
     delete = input("Do you want to delete this contact? Y/N: \n")
     while True:
@@ -375,6 +375,17 @@ def validate_reset():
             break
         return False
     
+
+def exit_programme():
+    """
+    Shutting down programme when user chooses the exit option in the menu.
+
+    """
+    print("-------------------------------------------------------")
+    print("---------------Thank you for using this app----------------")
+    print("--------------------Contactbook app team!-------------------")
+    print("------------------------GOODBYE------------------------")
+    print("-------------------------------------------------------")
 
 
 def main():
