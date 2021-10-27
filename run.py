@@ -208,9 +208,8 @@ def update_worksheet_contact(add_new_contact):
 
 def show_all_contacts():
     """
-    Function to get all the contacts from google sheet
-    and show them as a list for each person in the
-    contact book
+    Function to show all the contacts from google sheet
+    
     """
     get_all = CONTACTS.get_all_records()
     if get_all:
@@ -233,6 +232,83 @@ def printing_all_contacts(existing):
     print("-----------------------------------")
     return one_contact
 
+
+def search_contact():
+    """
+    Search function with a menu for the user to enter what
+    they are searching for in contact book.
+    """
+    print("----SEARCH:----")
+    print("1. First Name")
+    print("2. Last Name")
+    print("3. Phone Number")
+    print("4. E-Mail")
+    print("5. Back to Menu\n")
+    while True:
+        search_input = input("Please enter a number 1-5: \n")
+        if search_input == '1':
+            get_from_search('First Name')
+        elif search_input == '2':
+            get_from_search('Last Name')
+        elif search_input == '3':
+            get_from_search('Phone Number')
+        elif search_input == '4':
+            get_from_search('E-Mail')
+        elif search_input == '5':
+            start()
+        else:
+            print("Not a valid number, try again")
+            search_contact()
+            break
+        return False
+
+def get_from_search(find_search):
+    """
+    Get input from user in search task, from name, number and email
+    """
+    if find_search == 'First Name':
+        find_object = input('First Name: \n').capitalize()
+        fname = find_column('First Name', find_object)
+        search = fname
+    elif find_search == 'Last Name':
+        find_object = input('Last Name: \n').capitalize()
+        lname = find_column('Last Name', find_object)
+        search = lname
+    elif find_search == 'Phone Number':
+        find_object = input('Phone Number: \n')
+        number = find_column('Phone Number', find_object)
+        search = number
+    elif find_search == 'E-Mail':
+        find_object = input('E-Mail: \n')
+        mail = find_column('E-Mail', find_object)
+        search = mail
+    else:
+        print("Not a valid input, Try again")
+
+    if search:
+        for row_value in (search):
+            row_number = row_value.row
+            value_list = CONTACTS.row_values(row_number)
+            listToStr = ' '.join([str(elem) for elem in value_list])
+
+            print("------------------------------------------")
+            print(listToStr)
+            print("------------------------------------------")
+            delete_one(row_number)
+    else:
+        print("Contact not found, Try search again\n")
+        search_contact()
+
+
+def find_column(column, value):
+    """
+    Get the cell row number and column number of the
+    contact that the user is searching for
+    """
+    print("searching......\n")
+    column_match = CONTACTS.findall(value)
+
+    return column_match
           
 
 
