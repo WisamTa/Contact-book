@@ -1,31 +1,27 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+User Stories
+As a user I want...
 
-Welcome WisamTa,
+..that the program is simple to understand.
+.. to get feedback when navigate thrue the app.
+.. to add contact, be able to see all my saved contacts and to delete one or all.
+.. ways to get back to menu easy.
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **August 17, 2021**
+Site Owner Goals
+As a developer of this program, my goals was..
 
-## Reminders
+..To build a program that can store and add information.
+..Make it easy for user to understand and how to use it.
+..To make functions that add and store user inputs in API google sheets.
+..Create functions like add a contact, open exisiting contacts and delete.
+..Make a readable code as much as possible. 
+..strengthen my comprehension about user experience design because it will be my next course to study if needed.
+..Trying to think when using the app like an unsophisticated user. 
 
-* Your code must be placed in the `run.py` file
-* Your dependencies must be placed in the `requirements.txt` file
-* Do not edit any of the other files or your code may not deploy properly
+![This is an image](assest/images/flowchart.jpg)
+The Structure is what you can see in the flowchart here. There is six different task from a menu that get the user to the different functions depending on what the user input. Every function has a way to get back to the menu or quit the programme after the task is done. In the flowchart every function has a own colour just to make it easy to follow.
 
-## Creating the Heroku app
-
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
-
-1. `heroku/python`
-2. `heroku/nodejs`
-
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
-
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
-
-Connect your GitHub repository and deploy as normal.
-
-## Constraints
-
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
-
------
-Happy coding!
+Features
+Existing Features
+Start Menu
+Programme starts with this welcome message and a list of choises. The user needs to input the number of what task they want to follow and the program open that function.
+![This is an image](assest/images/start.png)
