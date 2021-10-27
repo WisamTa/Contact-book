@@ -153,7 +153,28 @@ def validate_email_input(email):
         return True
     else:
         print("E-Mail is invalid, please try again")
-        return False          
+        return False   
+
+
+def back_to_menu():
+    """
+    User get a question if
+    they want to go back to menu or quit.
+    """
+    while True:
+        user_choise = input("Back to menu: B, Quit programme: Q \n")
+        if user_choise == "B" or user_choise == "b":
+            start()
+            break
+        elif user_choise == "Q" or user_choise == "q":
+            exit_programme()
+            break
+        else:
+            print("Invalid input, Try again")
+            back_to_menu()
+            break
+        return False
+          
 
 
 def main():
