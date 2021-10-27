@@ -147,7 +147,7 @@ def validate_email_input(email):
         return True
     else:
         print("E-Mail is invalid, please try again")
-        return False   
+        return False
 
 
 def back_to_menu():
@@ -173,8 +173,8 @@ def back_to_menu():
 
 def add_one_more():
     """
-    Giving the user the choise to add new contact 
-    instead of get to start menu after adding a contact.
+    Giving the user the choise to add new contact instead
+    of get to start menu after adding a contact.
     """
     while True:
         again = input("Add another contact: A, Back to menu: B \n")
@@ -205,7 +205,6 @@ def update_worksheet_contact(add_new_contact):
 def show_all_contacts():
     """
     Function to show all the contacts from google sheet
-    
     """
     get_all = CONTACTS.get_all_records()
     if get_all:
@@ -259,6 +258,7 @@ def search_contact():
             search_contact()
             break
         return False
+
 
 def get_from_search(find_search):
     """
@@ -374,7 +374,7 @@ def validate_reset():
             print("Not a valid input, Try again!")
             break
         return False
-    
+
 
 def exit_programme():
     """
@@ -402,4 +402,3 @@ print("---------------This is a contact book app--------------")
 print("-------------Please choose an option of what------------")
 print("---------------you wish to do in the menu--------------")
 print("-------------------------------------------------------\n")
-main()
