@@ -68,6 +68,94 @@ def start():
             print("Not a valid input please enter a number 1-6")
 
 
+def add_new_contact():
+    """
+    Add a new contact with first name, last name, phone number and email
+    and check so the user input is correct, otherwise a error shows.
+    """
+    add_new_contact = {}
+
+    while True:
+        first_name = input("First Name: \n").capitalize()
+        valid = first_name
+        if not first_name.capitalize():
+            print("Please enter First Name with letters a-z")
+        else:
+            break
+    add_new_contact["FIRST NAME"] = first_name
+
+    while True:
+        last_name = input("Last Name: \n").capitalize()
+        if not last_name.capitalize():
+            print("Please enter Last Name with letters a-z")
+        else:
+            break
+    add_new_contact["Lname"] = last_name
+
+    while True:
+        """
+        To valid phone number using help from
+        https://www.sololearn.com/Discuss/2588446/solved-python-phone-number-validator
+        """
+        phone_number = input("Phone Number: \n")
+        pattern = r"^[0-9]"
+        match = re.match(pattern, phone_number)
+        if match and len(phone_number) <= 11:
+            break
+        else:
+            print("Inavalid, Not more than 11 digits")
+            continue
+    add_new_contact["Number"] = phone_number
+
+    while True:
+        email = input("E-Mail: \n")
+        if validate_email_input(email):
+            break
+        else:
+            continue
+    add_new_contact["E-Mail"] = email
+
+    valid = check_double('First Name', first_name)
+
+    if not valid:
+        print("-----------------------------------")
+        print("ADDED:\n")
+        print(f"Name: {first_name.upper()} {last_name.upper()}")
+        print(f'Number: {phone_number}')
+        print(f'E-Mail: {email}\n')
+        print("-----------------------------------")
+
+        return update_worksheet_contact(add_new_contact)
+    else:
+        print("Contact with this name already exist")
+        back_to_menu()
+
+
+def check_double(column, name):
+    """
+    function that check if the name user input in add_new_contact already
+    exist, so there is no doublicate contacts
+    """
+    print("loading...")
+    check = CONTACTS.find(name)
+    return check
+
+
+def validate_email_input(email):
+    """
+    check if the input email is validate
+    using help from this site:
+    https://www.geeksforgeeks.org/check-if-email-address-valid-or-not-in-python/
+    """
+    regex = r'\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b'
+
+    if(re.fullmatch(regex, email)):
+        return True
+    else:
+        print("E-Mail is invalid, please try again")
+        return False          
+
+
 def main():
     """
     contains all the functions for the program
