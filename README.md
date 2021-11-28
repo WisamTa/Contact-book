@@ -1,18 +1,18 @@
 # Content
 * [Project Description](#Project-Description)
 * [UX](#UX)
-* [User Stories](#User-Stories)
-* [Site Owner Goals](#Site-Owner-Goals)
-* [Structure](#Structure)
+  - [User Stories](#User-Stories)
+  - [Site Owner Goals](#Site-Owner-Goals)
+  - [Structure](#Structure)
 * [Features](#Features)
-* [Existing Features](#Existing-Features)
-* [Features Left To Implement](#Features-Left-To-Implement)
+  - [Existing Features](#Existing-Features)
+  - [Features Left To Implement](#Features-Left-To-Implement)
 * [Technologies Used](#Technologies-Used)
-* [Languages](#Languages)
-* [Other Programmes](#Other-Programmes)
+  - [Languages](#Languages)
+  - [Other Programmes](#Other-Programmes)
 * [Testing](#Testing)
-* [Validator Testing](#Validator-Testing)
-* [Bug and fix](#Bug-and-fix)
+  - [Validator Testing](#Validator-Testing)
+  - [Bug and fix](#Bug-and-fix)
 * [Deployment](#Deployment)
 * [Credits](#Credits)
 * [Ackmowledgements](#Ackmowledgements)
@@ -91,9 +91,9 @@ From the worksheet on google i left information about addresses and didn't use i
 
 # Technologies Used
 ### Language
-Python3 - This project is written by Python as a the programming language.
+- Python3 - This project is written by Python as a the programming language.
 
-Other programmes
+### Other programmes
 * Google sheets - To get  google sheet document (gspread) for store the information the user insert, and to remove information.
 * Gspread - The API to connect  to the programme.
 * GitHub - Hosting website.
@@ -104,8 +104,9 @@ Other programmes
 and few other  famous websites for helping coders and explaining the concepts widely. 
 
 
-# Validator Testing
-Valid code, passed on pep8 
+#  Validator Testing 
+
+- Valid code, passed on pep8 
 ![This is an image](assest/images/Pep8.PNG)
 
 
@@ -114,7 +115,8 @@ No bugs left on the deplyed verstion.
 
 
 # Deployment
-Using Code Institutes template I deployed it on Heroku to be able to use the program on a web server. Using Gitpod IDE. I used the usual steps: git add . , git commit with notes and then git push to my github repository. 
+Using Code Institutes template I deployed it on Heroku to be able to use the program on a web server. Using Gitpod IDE.
+I used the usual steps: git add . , git commit with notes and then git push to my github repository. 
 
 ## Project Deployment:
 For deploy this project on Heroku I followed these steps:
