@@ -82,7 +82,26 @@ Bugs
 No bugs left on the deplyed verstion.
 
 Deployment
-This project is deplyed on heroku with connection to github and using the code institue template. 
+Using Code Institutes template I deployed it on Heroku to be able to use the program on a web server. Using Gitpod IDE. I used the usual steps: git add, git commit with notes and then git push to my github repository. 
+
+Project Deployment:
+For deploy this project in Heroku I followed these steps:
+
+Create and log in to my account at Heroku
+Dashboard: Select "new" and "Create new app".
+Create a name for the project
+Navigate from the deploy tab at the top and select the setting tab.
+Because I use Code Institute template, I need to add a config var for creating this app.Recently Hreoku requires a new Config Var with  PORT as key  and 8000 as value.  
+Then add buildpacks below the config var section.
+Select Python as your "first" bulid pack in buildpacks window and save that.
+Add another a "second" buildpack and add node.JS and save.
+Select the deploy tab again and go to the deployment method section.
+Select GitHub - connect to GitHub button and follow the steps to connect to your GitHub account.
+Select the account and enter the  repository name and then search.
+select connect to connect the repository to the app within Heroku.
+Below App connected section, I choose to manual deployments options further down (following the teacher recommendations)
+When it is done correctly this will provide the live link for this App.
+Finally I choose Automatic Deploys button that will automatically rebuild the app everytime you add, commit and push from GitPod.
 
 Deployed link 
 https://contact-book123.herokuapp.com/
