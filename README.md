@@ -82,26 +82,33 @@ Bugs
 No bugs left on the deplyed verstion.
 
 Deployment
-Using Code Institutes template I deployed it on Heroku to be able to use the program on a web server. Using Gitpod IDE. I used the usual steps: git add, git commit with notes and then git push to my github repository. 
+Using Code Institutes template I deployed it on Heroku to be able to use the program on a web server. Using Gitpod IDE. I used the usual steps: git add . , git commit with notes and then git push to my github repository. 
 
 Project Deployment:
 For deploy this project in Heroku I followed these steps:
 
-Create and log in to my account at Heroku
-Dashboard: Select "new" and "Create new app".
-Create a name for the project
-Navigate from the deploy tab at the top and select the setting tab.
-Because I use Code Institute template, I need to add a config var for creating this app.Recently Hreoku requires a new Config Var with  PORT as key  and 8000 as value.  
-Then add buildpacks below the config var section.
-Select Python as your "first" bulid pack in buildpacks window and save that.
-Add another a "second" buildpack and add node.JS and save.
-Select the deploy tab again and go to the deployment method section.
-Select GitHub - connect to GitHub button and follow the steps to connect to your GitHub account.
-Select the account and enter the  repository name and then search.
-select connect to connect the repository to the app within Heroku.
-Below App connected section, I choose to manual deployments options further down (following the teacher recommendations)
-When it is done correctly this will provide the live link for this App.
-Finally I choose Automatic Deploys button that will automatically rebuild the app everytime you add, commit and push from GitPod.
+1-Create and log in to my account at Heroku
+2-Dashboard: Select "new" and "Create new app".
+3-Create a name for the project
+4-Navigate from the deploy tab at the top and select the setting tab.
+5-Because I use Code Institute template, I need to add a config var for creating this app.Recently Hreoku requires a new Config Var with  PORT as key  and 8000 as value.  
+6-Then add buildpacks below the config var section.
+7-Select Python as your "first" bulid pack in buildpacks window and save that.
+8-Add another a "second" buildpack and add node.JS and save.
+9-Select the deploy tab again and go to the deployment method section.
+10-Select GitHub - connect to GitHub button and follow the steps to connect to your GitHub account.
+11-Select the account and enter the  repository name and then search.
+12-select connect to connect the repository to the app within Heroku.
+13-Below App connected section, I choose to manual deployments options further down (following the teacher recommendations)
+14When it is done correctly this will provide the live link for this App.
+15-Finally I choose Automatic Deploys button that will automatically rebuild the app everytime you add, commit and push from GitPod.
 
 Deployed link 
 https://contact-book123.herokuapp.com/
+
+All code is written by me, with help from slack, tutor support, my mentor and this websites.
+
+gspread document - Using this as a help for making my functions
+StackOverflow - This is for the opening of the gspred showing all contacts
+GeeksforGeeks - for fix the list to just strings in search function using join() method
+w3schools- A learning platform for programming languages 
