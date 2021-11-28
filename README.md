@@ -81,10 +81,10 @@ Valid code, passed on pep8
 Bugs
 No bugs left on the deplyed verstion.
 
-Deployment
+## Deployment
 Using Code Institutes template I deployed it on Heroku to be able to use the program on a web server. Using Gitpod IDE. I used the usual steps: git add . , git commit with notes and then git push to my github repository. 
 
-Project Deployment:
+# Project Deployment:
 For deploy this project in Heroku I followed these steps:
 
 1-Create and log in to my account at Heroku
@@ -103,7 +103,7 @@ For deploy this project in Heroku I followed these steps:
 14When it is done correctly this will provide the live link for this App.
 15-Finally I choose Automatic Deploys button that will automatically rebuild the app everytime you add, commit and push from GitPod.
 
-Deployed link 
+# Deployed link 
 https://contact-book123.herokuapp.com/
 
 All code is written by me, with help from slack, tutor support, my mentor and this websites.
