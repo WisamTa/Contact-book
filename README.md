@@ -46,7 +46,7 @@ As a developer of this program, my goals was..
 ## Structure
 
 ![This is an image](assest/images/flowchart.jpg)
-The Structure is what you can see in the flowchart here. There is six different task from a menu that get the user to the different functions depending on what the user input. Every function has a way to get back to the menu or quit the programme after the task is done. In the flowchart every function has a own colour just to make it easy to follow.
+- The Structure is what you can see in the flowchart here. There is six different tasks from, a menu that get the user to the different functions depending on what the user input. Every function has a way to get back to the menu or to quit the programme after the task is done. In the flowchart every function has its own colour just to make it easy to follow.
 
 # Features
 
@@ -104,14 +104,17 @@ From the worksheet on google i left information about addresses and didn't use i
 and few other  famous websites for helping coders and explaining the concepts widely. 
 
 
-#  Validator Testing 
+# Testing 
+
+# Validator Testing 
 
 - Valid code, passed on pep8 
 ![This is an image](assest/images/Pep8.PNG)
 
 
 # Bugs
-No bugs left on the deplyed verstion.
+- One bug i would mention is that when start working, it's important to make sure about the connections between gspread and github via API by typing the command pip3 install -r requirements.txt 
+- No bugs left on the deplyed verstion.
 
 
 # Deployment
@@ -148,3 +151,6 @@ All code is written by me, with help from slack, tutor support, my mentor and th
 * StackOverflow - This is for the opening of the gspred showing all contacts
 * GeeksforGeeks - for fix the list to just strings in search function using join() method
 * w3schools- A learning platform for programming languages 
+
+# Acknowledgement
+I want to thank my mentor Richard Wells for giving an ear for  to listen and a motivation when I am stuck, and the lovely and generous community of Slack, students are alwyas up to help, the tutors that I deal with in the middle of the night, finally for Google the information Distributors my first option when facing issues.  
