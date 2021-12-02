@@ -150,7 +150,8 @@ All code is written by me, with help from slack, tutor support, my mentor and th
 * gspread document - Using this as a help for making my functions
 * StackOverflow - This is for the opening of the gspred showing all contacts
 * GeeksforGeeks - for fix the list to just strings in search function using join() method
-* w3schools- A learning platform for programming languages 
+* w3schools- A learning platform for programming languages.
+* Random.org to generat random phone numbers, emails, names and last names. 
 
 # Acknowledgement
 I want to thank my mentor Richard Wells for giving an ear for  to listen and a motivation when I am stuck, and the lovely and generous community of Slack, students are alwyas up to help, the tutors that I deal with in the middle of the night, finally for Google the information Distributors my first option when facing issues.  
